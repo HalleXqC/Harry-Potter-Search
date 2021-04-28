@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    background: url('../img/137980.jpg') fixed;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.cards-container{
+    padding: 0 2rem;
+}
+.card-image{
+    width: 100%;
+    height: 400px;
+}
+.input-container{
+    margin: 2rem auto;
+    width: 100%;
+}
+.character0info li{
+    font-size: 1.5rem;
+}
+.card_item{
+    position: relative !important;
+    perspective: 1000px !important;
+}
+.card-body{
+    position: relative;
+    padding: 0 !important;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+}
+.card_item:hover .card-body{
+    transform: rotateY(180deg) !important;
+}
+.card-body-front, .card-body-back{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.card-body-front{
+    background-color: rgba(255,255,255,0.8) !important;
+    color: black;
+}
+.card-body-back{
+    position: absolute;
+    top: 0;
+    background-color: rgba(255,255,255,0.8) !important;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    color: black;
+    text-align: center;
+}
+
+
+.card-body ul{
+    list-style-type: none;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+.card_body_list{
+    padding: 1rem;
+}
+.card-body-back a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    padding: 0.625rem 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    bottom: 20px;
+    left: 32%;
+    transition: 0.15s;
+}
+.card-body-back a:hover{
+    background-color: black;
+    color: white;
+}
+.card-body-back h6{
+    margin-bottom: 60px;
+    height: 340px;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+.bottom_block{
+    position: relative;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.deleteCharacter{
+    font-size: 15px !important;
+    padding: 0.625rem 1rem !important;
+    border-radius: 10px !important;
+}
+.editCharacter{
+    font-size: 15px !important;
+    padding: 0.625rem 1rem !important;
+    border-radius: 10px !important;
+}
+
+/* .addFav i{
+    font-size: 25px;
+}
+.addFav i:hover{
+    color: rgb(220,53,69);
+} */
+
+.card-header{
+    background-color: rgba(255,255,255,0.8) !important;
+}
+.card-footer{
+    background-color: rgba(255,255,255,0.8) !important;
+}
+/* .edit{
+    font-size: 15px !important;
+    text-decoration: none !important;
+    color: green !important;
+    padding: 0.625rem 1rem !important;
+    border: 1px solid green !important;
+    border-radius: 10px !important;
+    outline: 0 !important;
+    background: none !important;
+    margin-bottom: 20px !important;
+}
+.edit_block{
+    position: relative;
+    bottom: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.little_text{
+    font-size: 10px;
+} */
+
+.main_block{
+    position: fixed;
+    width: 60%;
+    height: 80vh;
+    transition: 0.5s;
+    z-index: 100;
+    background-color: black;
+    top: 10%;
+    left: -100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    background: url('https://wallpapercave.com/wp/wp2619142.jpg') center / cover ;
+}
+.main_block.activeMainBlock{
+    left: 20%;
+}
+.main_block.disactiveMainBlock{
+    left: -100%;
+}
+.closeCreate{
+    position: absolute;
+    z-index: 10000;
+    background: none;
+    outline: none;
+    border: none;
+    right: 1%;
+    top: -1%;
+    color: red;
+    font-size: 50px !important;
+}
+.inline_block{
+    position: relative;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    padding: 1rem 2rem;
+    height: 100%;
+}
+.inline_block form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.inline_block form label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1.5% 0;
+    width: 100%;
+}
+.inline_block form label h5{
+    color: white;
+    margin: 0;
+    margin-right: 1rem;
+}
+.inline_block h4{
+    margin-top: 0 !important;
+}
+.inline_block form label input{
+    width: 100% ;
+    padding: 0.5rem;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    background: none;
+    border-bottom: 1px solid white !important;
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.3);
+}
+.inline_block form label textarea{
+    width: 100% ;
+    overflow-x: hidden;
+    padding: 0.5rem;
+    outline: none !important;
+    border-radius: 5px;
+    background: none;
+    color: rgba(255,255,255,0.8);
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.3);
+}
+.inline_block form button{
+    margin: 0 auto !important;
+    margin-top: 5% !important;
+}
+
+
+
+.edit_block{
+    position: fixed;
+    width: 60%;
+    height: 80vh;
+    transition: 0.5s;
+    z-index: 100;
+    background-color: black;
+    top: 10%;
+    right: -100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    background: url('https://images.ctfassets.net/usf1vwtuqyxm/71J6YPxNauhFABbjHpGluJ/631bd6980b0a430d5b476ef331abb2b5/release_1_hogwarts.png') center / cover ;
+}
+.edit_block.activeEditBlock{
+    right: 20%;
+}
+.edit_block.disactiveEditBlock{
+    right: -100%;
+}
+.closeEdit{
+    position: absolute;
+    z-index: 10000;
+    background: none;
+    outline: none;
+    border: none;
+    right: 1%;
+    top: -1%;
+    color: red;
+    font-size: 50px !important;
+}
+.inline_edit_block{
+    position: relative;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    padding: 1rem 2rem;
+    height: 100%;
+}
+.inline_edit_block form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.inline_edit_block form label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1.5% 0;
+    width: 100%;
+}
+.inline_edit_block form label h5{
+    color: white;
+    margin: 0;
+    margin-right: 1rem;
+    text-shadow: 0 0 2px black;
+}
+.inline_edit_block h4{
+    margin-top: 0 !important;
+}
+.inline_edit_block form label input{
+    width: 100% ;
+    padding: 0.5rem;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    background: none;
+    border-bottom: 1px solid white !important;
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.3);
+}
+.inline_edit_block form label textarea{
+    width: 100% ;
+    overflow-x: hidden;
+    padding: 0.5rem;
+    outline: none !important;
+    border-radius: 5px;
+    background: none;
+    color: rgba(255,255,255,0.8);
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.3);
+}
+.inline_edit_block form button{
+    margin: 0 auto !important;
+    margin-top: 5% !important;
+}

@@ -28,7 +28,7 @@ body{
     transition: 0.8s;
     transform-style: preserve-3d;
 }
-.card-body:hover{
+.card_item:hover .card-body{
     transform: rotateY(180deg) !important;
 }
 .card-body-front, .card-body-back{
@@ -70,7 +70,10 @@ body{
     left: 32%;
 }
 .card-body-back h6{
-    margin-bottom: 150px;
+    margin-bottom: 60px;
+    height: 340px;
+    overflow-x: hidden;
+    line-height: 1.5;
 }
 .bottom_block{
     position: relative;
@@ -81,17 +84,14 @@ body{
     align-items: center;
 }
 
-/* .addFav{
-    position: absolute;
-    bottom: 20px;
-    left: 70%;
+.addFav{
     padding: 5px;
     outline: 0;
     border: 0;
     background: none;
     width: max-content;
 }
-.addFav i{
+/* .addFav i{
     font-size: 25px;
 }
 .addFav i:hover{
